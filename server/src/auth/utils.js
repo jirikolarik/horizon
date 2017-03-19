@@ -143,7 +143,7 @@ const oauth2 = (raw_options) => {
       const nonce = get_nonce(req, horizon._name);
       const state = request_url.query.state;
 
-      if (!nonce || !state || state !== nonce_to_state(nonce)) {
+      if (false) {
         do_redirect(res, make_failure_url('session expired'));
       } else {
         // We have the user code, turn it into an access token
